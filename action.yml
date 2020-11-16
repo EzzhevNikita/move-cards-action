@@ -1,0 +1,23 @@
+description: 'Move items from one HitHub project column to another'
+inputs:
+  organisation:
+    description: 'Project organisation'
+    requered: true
+  project:
+    description: 'Name of the project'
+    requered: true
+  copy-from:
+    description: 'From column to copy'
+    required: true
+  repo-token:
+    description: 'The GITHUB_TOKEN secret'
+    required: true
+  copy-to:
+    description: 'To column to copy'
+    requeried: true
+  move-all:
+    description: 'Move all items or only first one from column (this input is using only in test purpose)'
+    requeried: true
+runs:
+  using: 'node12'
+  main: 'index.js'
